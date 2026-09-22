@@ -1,0 +1,53 @@
+{
+  "author": "step-security",
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/step-security/github-status-action-v2/issues"
+  },
+  "dependencies": {
+    "@actions/core": "^2.0.3",
+    "@actions/github": "^8.0.1",
+    "axios": "^1.20.0"
+  },
+  "description": "Github status action V2",
+  "devDependencies": {
+    "@octokit/types": "^18.0.0",
+    "@types/node": "^26.5.1",
+    "@vercel/ncc": "^0.45.0",
+    "ava": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=24",
+    "npm": ">=11"
+  },
+  "homepage": "https://github.com/step-security/github-status-action-v2",
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "license": "MIT",
+  "main": "lib/main.js",
+  "name": "@step-security/github-status-action-v2",
+  "private": true,
+  "publisher": "step-security",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/step-security/github-status-action-v2.git"
+  },
+  "scripts": {
+    "build": "ncc build src/main.ts -o dist",
+    "test": "ava",
+    "all": "npm run build && npm test"
+  },
+  "version": "1.2.4"
+}
