@@ -21,7 +21,7 @@
     "@octokit/types": "^18.0.0",
     "@types/node": "^26.5.1",
     "@vercel/ncc": "^0.45.0",
-    "ava": "^7.0.0",
+    "ava": "^8.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   },
