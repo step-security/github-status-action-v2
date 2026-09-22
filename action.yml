@@ -1,0 +1,39 @@
+name: github-status-action-v2
+author: step-security
+description: Adds a check status on a commit, GitHub reports the last status added for a particular context.
+inputs:
+  authToken:
+    description: 'Use secrets.GITHUB_TOKEN or your own token if you need to trigger other workflows the use "on: status"'
+    required: true
+  context:
+    description: The context, this is displayed as the name of the check
+    required: false
+    default: default
+  description:
+    description: Short text explaining the status of the check
+    required: false
+    default: ""
+  owner:
+    description: Repository owner, defaults to context github.repository_owner if omitted
+    required: false
+    default: ${{ github.repository_owner }}
+  repository:
+    description: Repository, default to context github.repository if omitted
+    required: false
+    default: ${{ github.repository }}
+  sha:
+    description: SHA of commit to update status on, defaults to context github.sha
+    required: false
+    default: ${{ github.sha }}
+  state:
+    description: 'The status of the check: success, error, failure or pending'
+    required: true
+  target_url:
+    description: URL/URI to use for further details.
+    required: false
+runs:
+  using: node24
+  main: dist/index.js
+branding:
+  icon: check
+  color: green
