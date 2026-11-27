@@ -19,7 +19,7 @@
   "description": "Github status action V2",
   "devDependencies": {
     "@octokit/types": "^18.0.0",
-    "@types/node": "^26.5.1",
+    "@types/node": "^26.6.2",
     "@vercel/ncc": "^0.45.0",
     "ava": "^7.0.0",
     "ts-node": "^10.9.2",
